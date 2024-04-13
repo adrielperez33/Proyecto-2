@@ -25,16 +25,37 @@ body{
 
 .peliculas {
     width: 18rem;
-    margin-right: 20px; 
-    margin-bottom: 20px; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; 
+    transition: background-color 0.3s ease; 
+    border-radius: 1rem;
+    padding: 1rem; 
 }
+
 
 .mia{
     margin-right: 5rem;
 }
 
-footer{
+.card {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-1.5rem);
+  }
+  
+  footer{
     margin-top: 2rem;
     padding: 0.5rem;
     background-color: aliceblue;
+  }
+  
+  
+  .card:hover ~ footer {
+    transform: translateY(-1.5rem);
+
 }
+  
