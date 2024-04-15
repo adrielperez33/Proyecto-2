@@ -1,9 +1,13 @@
-const CarritoCompra = require("./index")
+const CarritoCompra = require("../index")
 describe("Testing del carrito de compra", () => {
 
     beforeEach(() => {
         carro = new CarritoCompra();
     });
+
+    it("carritoCompra es una clase", () => {
+        expect(carro instanceof CarritoCompra).toBe(true);
+    });    
 
     it("Debe tener un array", () => {
         expect(carro.array).toEqual([]);
@@ -12,6 +16,7 @@ describe("Testing del carrito de compra", () => {
     it("debe incluir un elemento al array", () =>{
         carro.agregarProducto(2)
         expect(carro.array).toEqual([2])
+        expect(carro.array).toHaveLength(1)
     })
 
     it("debe incluir varios elemento al array", () =>{
@@ -20,6 +25,7 @@ describe("Testing del carrito de compra", () => {
         carro.agregarProducto(6)
         carro.agregarProducto(12)
         expect(carro.array).toEqual([2,4,6,12])
+        expect(carro.array).toHaveLength(4)
     })
 
     it("calcula la suma de los numeros que le paso", () =>{

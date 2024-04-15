@@ -1,61 +1,66 @@
-body{
-    background-image: url(./imagenes/interstellar.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+body {
+  background-image: url(./imagenes/interstellar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#tituloPrincipal{
-    font-size: 2.5rem;
-    font-weight: bold; 
-    color: #333; 
-    margin-top: 4rem; 
-    margin-bottom: 3rem; 
-    padding: 0.1rem;
-    margin-left: 22rem;
-    margin-right: 22rem;
-    background-color: #f8f9fa;
-    border-radius: 10rem; 
+#tituloPrincipal {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 0.1rem;
+  margin-left: 22rem;
+  margin-right: 22rem;
+  background-color: #f8f9fa;
+  border-radius: 10rem;
 }
 
 #tarjetapelicula {
-    display: flex;
-    flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.peliculas {
-    width: 18rem;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: #fff; 
-    transition: background-color 0.3s ease; 
-    border-radius: 1rem;
-    padding: 1rem; 
-}
-
-
-.mia{
-    margin-right: 5rem;
-}
-
-.card {
-    position: relative;
+  .peliculas {
+    width: 20rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 4rem;
+    background-color: #fff;
     transition: transform 0.3s ease;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
   }
   
-  .card:hover {
+  .peliculas:hover {
     transform: translateY(-1.5rem);
   }
   
-  footer{
-    margin-top: 2rem;
-    padding: 0.5rem;
-    background-color: aliceblue;
+  .card-img-top {
+    width: 100%; 
+    max-height: 30rem; 
+    object-fit: cover;
+    border-radius: 1rem; 
+    margin-bottom: 1rem;
   }
   
+  .card-body {
+    flex: 1;
+  }
   
-  .card:hover ~ footer {
-    transform: translateY(-1.5rem);
 
+footer {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: aliceblue;
 }
-  
+
+.card:hover ~ footer {
+  transform: translateY(-1.5rem);
+}

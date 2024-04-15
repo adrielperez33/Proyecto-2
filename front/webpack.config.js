@@ -3,6 +3,6 @@ module.exports = {
 
     output: {
         path: __dirname + "/public",
-        filename: "bundle.js",
+        filename: "bundle1.js",
     },
 };
