@@ -9,16 +9,13 @@ const asincrono = async () => {
         const respuesta = await axios.get("https://students-api.up.railway.app/movies");
         const peliculas = respuesta.data;
         peliculas.forEach(pelicula => {
-            console.log(pelicula);
             const { title, year, director, duration, genre, rate, poster } = pelicula;
             const actividad = new Pelicula(title, year, director, duration, genre, rate, poster);
             repositorio.agregarAlArreglo(actividad);
         });
-        console.log(repositorio.mostrarArreglo());
         mostrarPeliculas(repositorio.mostrarArreglo());
     } catch (error) {
         alert("Hay un error inesperado");
-        console.log(error.message);
     }
 };
 
