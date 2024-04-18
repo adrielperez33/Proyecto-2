@@ -1,8 +1,8 @@
 const {Router} = require("express");
-const {pruebaControllers} = require("../controllers/pruebaControllers")
+const {getPruebaControllers} = require("../controllers/pruebaControllers")
 
-const router = Router();
+const routerMovies = Router();
 
-router.get("/", pruebaControllers)
+routerMovies.get("/", getPruebaControllers)
 
-module.exports = router;
+module.exports = routerMovies;
