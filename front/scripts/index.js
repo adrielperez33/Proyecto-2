@@ -6,7 +6,7 @@ const repositorio = new Repository();
 
 const asincrono = async () => {
     try {
-        const respuesta = await axios.get("https://students-api.up.railway.app/movies");
+        const respuesta = await axios.get("http://localhost:3000/movie");
         const peliculas = respuesta.data;
         peliculas.forEach(pelicula => {
             const { title, year, director, duration, genre, rate, poster } = pelicula;

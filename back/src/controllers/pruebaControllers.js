@@ -1,5 +1,13 @@
+const { json } = require("express")
+const moviesServices = require("../services/moviesServices")
+
 module.exports = {
-    pruebaControllers : (req, res) => {
-        res.status(200).send("próximamente estarán disponibles los datos de películas.")
+    pruebaControllers :async (req, res) => {
+        try {
+            const arreglo = await moviesServices.peliculas()
+            res.status(200).json(arreglo)
+        } catch (error) {
+            Error: json("error inesperado")
+        }
     } 
 }
