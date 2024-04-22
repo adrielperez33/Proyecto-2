@@ -59,8 +59,13 @@ footer {
   margin-top: 2rem;
   padding: 0.5rem;
   background-color: aliceblue;
+  
 }
 
 .card:hover ~ footer {
   transform: translateY(-1.5rem);
+}
+
+#navbarSupportedContent{
+padding-right: 5rem;
 }

@@ -1,12 +1,11 @@
 function creador(pelicula) {
     const { title, year, director, duration, genre, rate, poster } = pelicula;
     
-    // Crear el contenedor externo de la carta
     const contenedorExterno = document.createElement("div");
-    contenedorExterno.classList.add("peliculas"); // Agregar la clase "peliculas" al contenedor de la carta
+    contenedorExterno.classList.add("peliculas"); 
     
     const contenedorInterno = document.createElement("div");
-    contenedorInterno.classList.add("pelicula-inner"); // Agregar una clase para el contenedor interno
+    contenedorInterno.classList.add("pelicula-inner"); 
     
     const poste = document.createElement("img");
     poste.classList.add("card-img-top");
@@ -23,15 +22,15 @@ function creador(pelicula) {
     
     const directorr = document.createElement("p");
     directorr.classList.add("card-text");
-    directorr.innerHTML = `director: ${director}`;
+    directorr.innerHTML = `Director: ${director}`;
     
     const duracion = document.createElement("p");
     duracion.classList.add("card-text");
-    duracion.innerHTML = `duracion: ${duration}`;
+    duracion.innerHTML = `Duracion: ${duration}`;
     
     const genero = document.createElement("p");
     genero.classList.add("card-text");
-    genero.innerHTML = `generos: ${genre.join(", ")}`;
+    genero.innerHTML = `Genero: ${genre.join(", ")}`;
     
     const rates = document.createElement("p");
     rates.classList.add("card-text");
@@ -39,7 +38,7 @@ function creador(pelicula) {
     
     const ano = document.createElement("p");
     ano.classList.add("card-text");
-    ano.innerHTML = `año: ${year}`;
+    ano.innerHTML = `Año: ${year}`;
     
     cuerpo.append(titulo, directorr, duracion, genero, rates, ano);
     
