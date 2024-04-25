@@ -30,8 +30,7 @@ function mostrarPeliculas(peliculas) {
 }
 
 function manejarEventListeners() {
-    const btnLimpiar = document.getElementById('limpiarBtn');
-    
+    const btnLimpiar = document.getElementById('limpiarBtn');   
     btnLimpiar.addEventListener('click', () => {
         resetForm();
     });
@@ -56,12 +55,18 @@ function resetForm() {
 async function manejarEnvioFormulario() {
     const formData = new FormData(document.getElementById('form'));
     
+    const genreString = formData.get('genre');
+    
+    const genreArray = genreString.split(',');
+    const newGenreArray = genreArray.map(genre => genre.trim());
+
+    
     const data = {
         title: formData.get('title'),
         year: formData.get('year'),
         director: formData.get('director'),
         duration: formData.get('duration'),
-        genre: formData.get('genre'),
+        genre: newGenreArray,
         rate: formData.get('rate'),
         poster: formData.get('poster')
     };
@@ -83,6 +88,7 @@ async function manejarEnvioFormulario() {
         console.error('Error al enviar los datos a la base de datos:', error);
     }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
