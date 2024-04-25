@@ -1,31 +1,28 @@
-
-class Pelicula{
-    constructor(title, year, director, duration, genre, rate, poster){
-     this.title = title
-     this.year = year
-     this.director = director
-     this.duration = duration
-     this.genre = genre
-     this.rate = rate
-     this.poster = poster
+class Pelicula {
+    constructor(title, year, director, duration, genre, rate, poster) {
+        this.title = title
+        this.year = year
+        this.director = director
+        this.duration = duration
+        this.genre = genre
+        this.rate = rate
+        this.poster = poster
     }
 }
 
-class Repository{
-    constructor(){
+class Repository {
+    constructor() {
         this.array = []
     }
 
-    agregarAlArreglo(parametro){
+    agregarAlArreglo(parametro) {
         this.array.push(parametro)
-        
     }
 
-    mostrarArreglo(){
+    mostrarArreglo() {
         return this.array
     }
 }
-
 
 module.exports = {
     Pelicula,

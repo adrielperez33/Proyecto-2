@@ -1,8 +1,8 @@
 body {
   background-image: url(./imagenes/interstellar.webp);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 #tituloPrincipal {
@@ -16,6 +16,7 @@ body {
   margin-right: 22rem;
   background-color: #f8f9fa;
   border-radius: 10rem;
+  border: 0.3rem solid rgb(0, 0, 0);
 }
 
 #tarjetapelicula {
@@ -36,6 +37,7 @@ body {
     flex-direction: column; 
     align-items: center; 
     text-align: center;
+    border: 0.4rem solid rgb(0, 0, 0);
   }
   
   .peliculas:hover {
